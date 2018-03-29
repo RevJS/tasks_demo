@@ -74,7 +74,9 @@ class AppC extends React.Component<WithStyles<keyof typeof styles>, IAppState> {
                     </MenuItem>
                 </Drawer>
 
-                <Route exact path="/" component={Dashboard} />
+                <div style={{ marginTop: 80 }}>
+                    <Route exact path="/" component={Dashboard} />
+                </div>
 
             </MuiThemeProvider>
         );

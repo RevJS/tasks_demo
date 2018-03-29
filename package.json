@@ -12,6 +12,7 @@
     "build-client": "webpack --mode development --config ./conf/webpack.client.config.js",
     "build-clientlibs": "webpack --mode development --config ./conf/webpack.clientlibs.config.js",
     "build-server": "tslint -p . && tsc",
+    "postinstall": "npm run build",
     "start": "node ./dist/server/server.js",
     "test": "",
     "watch-client": "webpack --mode development --config ./conf/webpack.client.config.js --watch",
@@ -33,8 +34,8 @@
     "rev-api": "0.15.0",
     "rev-api-client": "0.15.0",
     "rev-models": "0.15.0",
-    "rev-ui": "0.15.0",
-    "rev-ui-materialui": "0.15.0",
+    "rev-ui": "0.15.1",
+    "rev-ui-materialui": "0.15.1",
     "source-map-support": "0.5.4"
   },
   "devDependencies": {
