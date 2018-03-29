@@ -4,6 +4,11 @@ import Grid from 'material-ui/Grid';
 import { ListView } from 'rev-ui';
 import Card from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button';
+
+const buttonsStyle = {
+    marginBottom: 15, textAlign: 'right'
+};
 
 export const Dashboard: React.StatelessComponent = () => (
     <div style={{ maxWidth: 1500, padding: 20, margin: '0 auto' }}>
@@ -15,6 +20,11 @@ export const Dashboard: React.StatelessComponent = () => (
         <Grid container spacing={24}>
 
             <Grid item xs={12} md={6}>
+                <div style={buttonsStyle}>
+                    <Button variant="raised" color="primary">
+                        New Project
+                    </Button>
+                </div>
                 <Card>
                     <ListView
                         title="Open Projects"
@@ -31,6 +41,11 @@ export const Dashboard: React.StatelessComponent = () => (
             </Grid>
 
             <Grid item xs={12} md={6}>
+                <div style={buttonsStyle}>
+                    <Button variant="raised" color="primary">
+                        New Task
+                    </Button>
+                </div>
                 <Card>
                     <ListView
                         title="Upcoming Tasks"
