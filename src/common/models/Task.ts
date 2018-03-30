@@ -19,14 +19,14 @@ export class Task {
         id: number;
     @TextField({ label: 'Task Name' })
         name: string;
-    @TextField({ label: 'Description', multiLine: true, required: false })
-        description: string;
     @SelectField({ label: 'Status' , selection: TASK_STATUS })
         status: string;
     @DateField({ label: 'Target Start Date' })
         target_start_date: string;
     @DateField({ label: 'Target Finish Date' })
         target_finish_date: string;
+    @TextField({ label: 'Task Details', multiLine: true, required: false })
+        details: string;
 
     constructor(data?: Partial<Task>) {
         Object.assign(this, data);
