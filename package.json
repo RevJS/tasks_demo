@@ -35,7 +35,7 @@
     "rev-api-client": "0.15.0",
     "rev-models": "0.15.0",
     "rev-ui": "0.15.1",
-    "rev-ui-materialui": "0.15.1",
+    "rev-ui-materialui": "0.15.2",
     "source-map-support": "0.5.4"
   },
   "devDependencies": {

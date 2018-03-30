@@ -12,8 +12,10 @@ import { MenuItem } from 'material-ui/Menu';
 import { ListItemIcon, ListItemText } from 'material-ui/List';
 import EventNote from 'material-ui-icons/EventNote';
 import List from 'material-ui-icons/List';
-import { Route } from 'react-router-dom';
+import { Route, withRouter, RouteComponentProps } from 'react-router-dom';
 import { Dashboard } from './Dashboard';
+
+import { ProjectDetail } from './projects/ProjectDetail';
 
 const theme = createMuiTheme();
 
@@ -28,7 +30,9 @@ export interface IAppState {
     menuOpen: boolean;
 }
 
-class AppC extends React.Component<WithStyles<keyof typeof styles>, IAppState> {
+type AppProps = WithStyles<keyof typeof styles> & RouteComponentProps<any>;
+
+class AppC extends React.Component<AppProps, IAppState> {
 
     constructor(props: any) {
         super(props);
@@ -76,6 +80,7 @@ class AppC extends React.Component<WithStyles<keyof typeof styles>, IAppState> {
 
                 <div style={{ marginTop: 80 }}>
                     <Route exact path="/" component={Dashboard} />
+                    <Route path="/projects/detail" component={ProjectDetail} />
                 </div>
 
             </MuiThemeProvider>
@@ -83,4 +88,4 @@ class AppC extends React.Component<WithStyles<keyof typeof styles>, IAppState> {
     }
 }
 
-export const App: React.ComponentType = withStyles(styles)(AppC);
+export const App: React.ComponentType = withRouter(withStyles(styles)(AppC));
