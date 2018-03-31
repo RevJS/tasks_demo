@@ -31,5 +31,6 @@ npm run watch-client
 
 * Enter to search!
 * Tasks List on Projects
+* Delete projects / tasks
 * Searching Tasks based on User / Project name instead of ID
 * Reduce bundle size (material-ui is big!)
