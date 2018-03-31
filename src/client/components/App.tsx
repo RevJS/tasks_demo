@@ -14,12 +14,8 @@ import EventNote from 'material-ui-icons/EventNote';
 import List from 'material-ui-icons/List';
 import Home from 'material-ui-icons/Home';
 import SupervisorAccount from 'material-ui-icons/SupervisorAccount';
-import { Route, withRouter, RouteComponentProps } from 'react-router-dom';
-import { Dashboard } from './Dashboard';
-
-import { ProjectDetail } from './projects/ProjectDetail';
-import { ProjectList } from './projects/ProjectList';
-import { TaskDetail } from './tasks/TaskDetail';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { Routes } from './Routes';
 
 const theme = createMuiTheme();
 
@@ -66,6 +62,7 @@ class AppC extends React.Component<AppProps, IAppState> {
         return (
             <MuiThemeProvider theme={theme}>
                 <Reboot />
+
                 <AppBar position="fixed">
                     <Toolbar>
                         <IconButton aria-label="Menu" color="inherit" className={classes.menuButton}
@@ -77,6 +74,7 @@ class AppC extends React.Component<AppProps, IAppState> {
                         </Typography>
                     </Toolbar>
                 </AppBar>
+
                 <Drawer open={this.state.menuOpen} onClose={this.onMenuButtonClick}>
                     <div style={{ background: '#4054B2', height: 65, marginBottom: 10 }}></div>
                     <MenuItem onClick={() => this.onMenuClick('/')}>
@@ -97,12 +95,7 @@ class AppC extends React.Component<AppProps, IAppState> {
                     </MenuItem>
                 </Drawer>
 
-                <div style={{ marginTop: 80 }}>
-                    <Route exact path="/" component={Dashboard} />
-                    <Route path="/projects/detail" component={ProjectDetail} />
-                    <Route path="/projects/list" component={ProjectList} />
-                    <Route path="/tasks/detail" component={TaskDetail} />
-                </div>
+                <Routes />
 
             </MuiThemeProvider>
         );
