@@ -12,6 +12,7 @@ import { BasePage } from './BasePage';
 
 import { logger } from './logging';
 import { config } from './config';
+import { config as clientConfig } from '../client/config';
 
 import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa';
 import { api, serverModels } from './models/api';
@@ -48,7 +49,7 @@ app.use(router.allowedMethods());
 
 app.listen(config.port);
 
-console.log(`RevJS Demo App running at http://localhost:${config.port}/`);
+console.log(`RevJS Demo App running at http://localhost:${config.port}${clientConfig.basePath}/`);
 console.log(`Graphiql running at http://localhost:${config.port}/graphiql`);
 
 createData(serverModels)

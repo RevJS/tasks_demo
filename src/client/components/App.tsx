@@ -16,6 +16,7 @@ import Home from 'material-ui-icons/Home';
 import SupervisorAccount from 'material-ui-icons/SupervisorAccount';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Routes } from './Routes';
+import { config } from '../config';
 
 const theme = createMuiTheme();
 
@@ -51,7 +52,7 @@ class AppC extends React.Component<AppProps, IAppState> {
     }
 
     onMenuClick(url: string) {
-        this.props.history.push(url);
+        this.props.history.push(config.basePath + url);
         this.setState({
             menuOpen: false
         });

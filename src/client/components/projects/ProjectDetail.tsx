@@ -4,6 +4,7 @@ import { DetailView, Field, SaveAction } from 'rev-ui';
 import Card from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import { withRouter } from 'react-router-dom';
+import { config } from '../../config';
 
 export const ProjectDetail = withRouter((props) => {
 
@@ -33,7 +34,7 @@ export const ProjectDetail = withRouter((props) => {
                         onError={(err) => alert('Save Error: ' + JSON.stringify(err, null, 2))}
                         onSuccess={() => {
                             alert('Project Saved');
-                            props.history.push('/');
+                            props.history.push(config.basePath + '/');
                         }}
                     />
                 </DetailView>

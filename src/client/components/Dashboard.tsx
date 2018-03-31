@@ -6,6 +6,7 @@ import Card from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import { withRouter } from 'react-router-dom';
+import { config } from '../config';
 
 const buttonGroupStyle = {
     marginBottom: 15, textAlign: 'right'
@@ -27,11 +28,11 @@ export const Dashboard = withRouter((props) => (
             <Grid item xs={12} md={6}>
                 <div style={buttonGroupStyle}>
                     <Button variant="raised" color="primary" style={buttonStyle}
-                        onClick={() => props.history.push('/projects/list')}>
+                        onClick={() => props.history.push(config.basePath + '/projects/list')}>
                         All Projects
                     </Button>
                     <Button variant="raised" color="primary" style={buttonStyle}
-                        onClick={() => props.history.push('/projects/detail')}>
+                        onClick={() => props.history.push(config.basePath + '/projects/detail')}>
                         New Project
                     </Button>
                 </div>
@@ -48,7 +49,7 @@ export const Dashboard = withRouter((props) => (
                         orderBy={['name']}
                         limit={5}
                         onItemPress={(item) => {
-                            props.history.push('/projects/detail?id=' + item.id);
+                            props.history.push(config.basePath + '/projects/detail?id=' + item.id);
                         }}
                     />
                 </Card>
@@ -57,11 +58,11 @@ export const Dashboard = withRouter((props) => (
             <Grid item xs={12} md={6}>
                 <div style={buttonGroupStyle}>
                     <Button variant="raised" color="primary" style={buttonStyle}
-                        onClick={() => props.history.push('/tasks/list')}>
+                        onClick={() => props.history.push(config.basePath + '/tasks/list')}>
                         All Tasks
                     </Button>
                     <Button variant="raised" color="primary" style={buttonStyle}
-                        onClick={() => props.history.push('/tasks/detail')}>
+                        onClick={() => props.history.push(config.basePath + '/tasks/detail')}>
                         New Task
                     </Button>
                 </div>
@@ -79,7 +80,7 @@ export const Dashboard = withRouter((props) => (
                         orderBy={['target_start_date']}
                         limit={5}
                         onItemPress={(item) => {
-                            props.history.push('/tasks/detail?id=' + item.id);
+                            props.history.push(config.basePath + '/tasks/detail?id=' + item.id);
                         }}
                     />
                 </Card>

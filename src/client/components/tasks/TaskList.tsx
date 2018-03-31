@@ -5,6 +5,7 @@ import Typography from 'material-ui/Typography';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { SearchView, SearchField, SearchAction, ListView } from 'rev-ui';
 import Button from 'material-ui/Button';
+import { config } from '../../config';
 
 const buttonGroupStyle = {
     marginBottom: 15, textAlign: 'right'
@@ -68,7 +69,7 @@ class TaskListC extends React.Component<RouteComponentProps<any>, ITaskListState
 
                 <div style={buttonGroupStyle}>
                     <Button variant="raised" color="primary" style={buttonStyle}
-                        onClick={() => this.props.history.push('/tasks/detail')}>
+                        onClick={() => this.props.history.push(config.basePath + '/tasks/detail')}>
                         New Task
                     </Button>
                 </div>
@@ -90,7 +91,7 @@ class TaskListC extends React.Component<RouteComponentProps<any>, ITaskListState
                         orderBy={['target_start_date']}
                         limit={10}
                         onItemPress={(item) => {
-                            this.props.history.push('/tasks/detail?id=' + item.id);
+                            this.props.history.push(config.basePath + '/tasks/detail?id=' + item.id);
                         }}
                     />
                 </Card>

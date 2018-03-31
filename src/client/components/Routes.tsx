@@ -1,6 +1,7 @@
 
 import * as React from 'react';
 import { Route } from 'react-router-dom';
+import { config } from '../config';
 
 import { Dashboard } from './Dashboard';
 import { ProjectDetail } from './projects/ProjectDetail';
@@ -11,11 +12,11 @@ import { UserList } from './users/UserList';
 
 export const Routes: React.StatelessComponent = () => (
     <div style={{ marginTop: 80 }}>
-        <Route exact path="/" component={Dashboard} />
-        <Route path="/projects/detail" component={ProjectDetail} />
-        <Route path="/projects/list" component={ProjectList} />
-        <Route path="/tasks/detail" component={TaskDetail} />
-        <Route path="/tasks/list" component={TaskList} />
-        <Route path="/users/list" component={UserList} />
+        <Route exact path={config.basePath + '/'} component={Dashboard} />
+        <Route path={config.basePath + '/projects/detail'} component={ProjectDetail} />
+        <Route path={config.basePath + '/projects/list'} component={ProjectList} />
+        <Route path={config.basePath + '/tasks/detail'} component={TaskDetail} />
+        <Route path={config.basePath + '/tasks/list'} component={TaskList} />
+        <Route path={config.basePath + '/users/list'} component={UserList} />
     </div>
 );

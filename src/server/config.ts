@@ -1,12 +1,5 @@
 
-export interface IConfig {
-    port: number;
-    prettyLog: boolean;
-}
-
-const config = {
+export const config = {
     port: process.env.NODE_PORT || 3000,
     prettyLog: process.env.NODE_ENV != 'production'
 };
-
-export { config };
