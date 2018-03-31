@@ -56,7 +56,8 @@ export const Dashboard = withRouter((props) => (
 
             <Grid item xs={12} md={6}>
                 <div style={buttonGroupStyle}>
-                    <Button variant="raised" color="primary" style={buttonStyle}>
+                    <Button variant="raised" color="primary" style={buttonStyle}
+                        onClick={() => props.history.push('/tasks/list')}>
                         All Tasks
                     </Button>
                     <Button variant="raised" color="primary" style={buttonStyle}
@@ -69,8 +70,9 @@ export const Dashboard = withRouter((props) => (
                         title="Open Tasks"
                         model="Task"
                         fields={[
-                            'name', 'status', 'target_start_date', 'target_finish_date'
+                            'name', 'status', 'target_start_date', 'project'
                         ]}
+                        related={['project']}
                         where={{
                             status: { _in: ['not_started', 'in_progress'] }
                         }}

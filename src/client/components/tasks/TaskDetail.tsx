@@ -23,6 +23,8 @@ export const TaskDetail = withRouter((props) => {
                 <DetailView model="Task" primaryKeyValue={paskId}>
                     <Field name="name" />
                     <Field name="status" />
+                    <Field name="project" />
+                    <Field name="user" />
                     <Field name="target_start_date" />
                     <Field name="target_finish_date" />
                     <Field name="details" colspan={12} />
