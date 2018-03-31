@@ -49,6 +49,7 @@ app.use(router.allowedMethods());
 app.listen(config.port);
 
 console.log(`RevJS Demo App running at http://localhost:${config.port}/`);
+console.log(`Graphiql running at http://localhost:${config.port}/graphiql`);
 
 createData(serverModels)
     .then(() => {

@@ -1,5 +1,5 @@
 
-import { IModelManager, ValidationError } from 'rev-models';
+import { IModelManager } from 'rev-models';
 import { Project } from '../models/Project';
 
 export const PROJECTS: Project[] = [

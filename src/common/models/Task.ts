@@ -1,7 +1,10 @@
 
 import {
-    AutoNumberField, TextField, SelectField, DateField
+    AutoNumberField, TextField, SelectField, DateField,
+    RelatedModel
 } from 'rev-models';
+import { Project } from './Project';
+import { User } from './User';
 import { ApiOperations } from 'rev-api/lib/decorators';
 
 const TASK_STATUS = [
@@ -27,6 +30,10 @@ export class Task {
         target_finish_date: string;
     @TextField({ label: 'Task Details', multiLine: true, required: false })
         details: string;
+    @RelatedModel({ label: 'Assigned User', model: 'User' })
+        user: User;
+    @RelatedModel({ label: 'Project', model: 'Project' })
+        project: Project;
 
     constructor(data?: Partial<Task>) {
         Object.assign(this, data);

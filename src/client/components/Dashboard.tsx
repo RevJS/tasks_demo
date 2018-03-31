@@ -66,7 +66,7 @@ export const Dashboard = withRouter((props) => (
                 </div>
                 <Card>
                     <ListView
-                        title="Upcoming Tasks"
+                        title="Open Tasks"
                         model="Task"
                         fields={[
                             'name', 'status', 'target_start_date', 'target_finish_date'
@@ -75,6 +75,7 @@ export const Dashboard = withRouter((props) => (
                             status: { _in: ['not_started', 'in_progress'] }
                         }}
                         orderBy={['target_start_date']}
+                        limit={5}
                         onItemPress={(item) => {
                             props.history.push('/tasks/detail?id=' + item.id);
                         }}
