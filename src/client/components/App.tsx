@@ -12,6 +12,8 @@ import { MenuItem } from 'material-ui/Menu';
 import { ListItemIcon, ListItemText } from 'material-ui/List';
 import EventNote from 'material-ui-icons/EventNote';
 import List from 'material-ui-icons/List';
+import Home from 'material-ui-icons/Home';
+import SupervisorAccount from 'material-ui-icons/SupervisorAccount';
 import { Route, withRouter, RouteComponentProps } from 'react-router-dom';
 import { Dashboard } from './Dashboard';
 
@@ -52,6 +54,13 @@ class AppC extends React.Component<AppProps, IAppState> {
         });
     }
 
+    onMenuClick(url: string) {
+        this.props.history.push(url);
+        this.setState({
+            menuOpen: false
+        });
+    }
+
     render() {
         const { classes } = this.props;
         return (
@@ -70,13 +79,21 @@ class AppC extends React.Component<AppProps, IAppState> {
                 </AppBar>
                 <Drawer open={this.state.menuOpen} onClose={this.onMenuButtonClick}>
                     <div style={{ background: '#4054B2', height: 65, marginBottom: 10 }}></div>
-                    <MenuItem>
+                    <MenuItem onClick={() => this.onMenuClick('/')}>
+                        <ListItemIcon><Home /></ListItemIcon>
+                        <ListItemText inset primary="Dashboard" />
+                    </MenuItem>
+                    <MenuItem onClick={() => this.onMenuClick('/projects/list')}>
                         <ListItemIcon><EventNote /></ListItemIcon>
                         <ListItemText inset primary="Projects" />
                     </MenuItem>
-                    <MenuItem>
+                    <MenuItem onClick={() => this.onMenuClick('/tasks/list')}>
                         <ListItemIcon><List /></ListItemIcon>
                         <ListItemText inset primary="Tasks" />
+                    </MenuItem>
+                    <MenuItem onClick={() => this.onMenuClick('/users/list')}>
+                        <ListItemIcon><SupervisorAccount /></ListItemIcon>
+                        <ListItemText inset primary="Users" />
                     </MenuItem>
                 </Drawer>
 
