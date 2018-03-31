@@ -12,6 +12,7 @@
     "build-client": "webpack --mode production --config ./conf/webpack.client.config.js",
     "build-clientlibs": "webpack --mode production --config ./conf/webpack.clientlibs.config.js",
     "build-server": "tslint -p . && tsc",
+    "build-standalone": "webpack --mode production --config ./conf/webpack.client_standalone.config.js",
     "postinstall": "npm run build",
     "start": "node ./dist/server/server.js",
     "test": "",

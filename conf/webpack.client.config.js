@@ -41,5 +41,8 @@ module.exports = function() {
                 }),
             ]
         },
+        performance: {
+            hints: false
+        }
     }
 }
