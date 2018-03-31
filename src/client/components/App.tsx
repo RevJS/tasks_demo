@@ -13,6 +13,9 @@ import { ListItemIcon, ListItemText } from 'material-ui/List';
 import EventNote from 'material-ui-icons/EventNote';
 import List from 'material-ui-icons/List';
 import Home from 'material-ui-icons/Home';
+import LibraryBooks from 'material-ui-icons/LibraryBooks';
+import Code from 'material-ui-icons/Code';
+import Divider from 'material-ui/Divider';
 import SupervisorAccount from 'material-ui-icons/SupervisorAccount';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Routes } from './Routes';
@@ -90,9 +93,18 @@ class AppC extends React.Component<AppProps, IAppState> {
                         <ListItemIcon><List /></ListItemIcon>
                         <ListItemText inset primary="Tasks" />
                     </MenuItem>
-                    <MenuItem onClick={() => this.onMenuClick('/users/list')}>
+                    <MenuItem onClick={() => this.onMenuClick('/users/list')} style={{ marginBottom: 10 }}>
                         <ListItemIcon><SupervisorAccount /></ListItemIcon>
                         <ListItemText inset primary="Users" />
+                    </MenuItem>
+                    <Divider />
+                    <MenuItem onClick={() => window.location.href = 'https://revjs.org/'} style={{ marginTop: 10 }}>
+                        <ListItemIcon><LibraryBooks /></ListItemIcon>
+                        <ListItemText primary="RevJS Documentation" />
+                    </MenuItem>
+                    <MenuItem onClick={() => window.location.href = 'https://github.com/RevJS/tasks_demo'}>
+                        <ListItemIcon><Code /></ListItemIcon>
+                        <ListItemText primary="Edit on Github" />
                     </MenuItem>
                 </Drawer>
 
