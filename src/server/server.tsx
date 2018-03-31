@@ -14,7 +14,8 @@ import { logger } from './logging';
 import { config } from './config';
 
 import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa';
-import { api } from './models/api';
+import { api, serverModels } from './models/api';
+import { createData } from '../common/testdata';
 
 const staticPath = path.join(__dirname, '..', '..', 'dist', 'static');
 
@@ -48,3 +49,11 @@ app.use(router.allowedMethods());
 app.listen(config.port);
 
 console.log(`RevJS Demo App running at http://localhost:${config.port}/`);
+
+createData(serverModels)
+    .then(() => {
+        console.log('Demo Data Loaded.');
+    })
+    .catch((e) => {
+        console.error(e);
+    });
