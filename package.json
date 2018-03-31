@@ -9,8 +9,8 @@
   "license": "MIT",
   "scripts": {
     "build": "npm run build-server && npm run build-clientlibs && npm run build-client",
-    "build-client": "webpack --mode development --config ./conf/webpack.client.config.js",
-    "build-clientlibs": "webpack --mode development --config ./conf/webpack.clientlibs.config.js",
+    "build-client": "webpack --mode production --config ./conf/webpack.client.config.js",
+    "build-clientlibs": "webpack --mode production --config ./conf/webpack.clientlibs.config.js",
     "build-server": "tslint -p . && tsc",
     "postinstall": "npm run build",
     "start": "node ./dist/server/server.js",
