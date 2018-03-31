@@ -46,6 +46,7 @@ export const Dashboard = withRouter((props) => (
                             status: { _in: ['draft', 'in_progress'] }
                         }}
                         orderBy={['name']}
+                        limit={5}
                         onItemPress={(item) => {
                             props.history.push('/projects/detail?id=' + item.id);
                         }}
