@@ -17,6 +17,9 @@ export function BasePage() {
         <html>
             <head>
                 <title>{title}</title>
+                <meta charSet="utf-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 {clientCss.map((url, idx) => (
                     <link rel="stylesheet" href={url} key={idx} />
                 ))}
