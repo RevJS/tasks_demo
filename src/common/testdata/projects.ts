@@ -4,7 +4,6 @@ import { Project } from '../models/Project';
 
 export const PROJECTS: Project[] = [
     new Project({
-        id: 1,
         name: 'Tincidunt Dui Augue Company',
         description: 'enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed',
         status: 'draft',
@@ -12,7 +11,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-04-06'
     }),
     new Project({
-        id: 2,
         name: 'Libero Et Limited',
         description: 'id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis',
         status: 'cancelled',
@@ -20,7 +18,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-08-03'
     }),
     new Project({
-        id: 3,
         name: 'Est Vitae Sodales PC',
         description: 'molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula.',
         status: 'completed',
@@ -28,7 +25,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2019-01-09'
     }),
     new Project({
-        id: 4,
         name: 'Ipsum LLP',
         description: 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia',
         status: 'draft',
@@ -36,7 +32,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-05-06'
     }),
     new Project({
-        id: 5,
         name: 'Vivamus Institute',
         description: 'vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non',
         status: 'in_progress',
@@ -44,7 +39,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-04-27'
     }),
     new Project({
-        id: 6,
         name: 'Congue Turpis Company',
         description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce',
         status: 'draft',
@@ -52,7 +46,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-09-17'
     }),
     new Project({
-        id: 7,
         name: 'Sapien Corp.',
         description: 'torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus.',
         status: 'cancelled',
@@ -60,7 +53,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-09-21'
     }),
     new Project({
-        id: 8,
         name: 'Consequat Ltd',
         description: 'elit. Aliquam auctor, velit eget laoreet posuere, enim nisl elementum purus,',
         status: 'completed',
@@ -68,7 +60,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2019-03-15'
     }),
     new Project({
-        id: 9,
         name: 'Vestibulum Limited',
         description: 'non enim commodo hendrerit. Donec porttitor tellus non magna. Nam',
         status: 'in_progress',
@@ -76,7 +67,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2019-02-10'
     }),
     new Project({
-        id: 10,
         name: 'Bibendum Sed Est Consulting',
         description: 'Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam,',
         status: 'in_progress',
@@ -84,7 +74,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-03-05'
     }),
     new Project({
-        id: 11,
         name: 'Vel Convallis Institute',
         description: 'vel, vulputate eu, odio. Phasellus at augue id ante dictum cursus. Nunc mauris elit, dictum eu, eleifend',
         status: 'completed',
@@ -92,7 +81,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-05-25'
     }),
     new Project({
-        id: 12,
         name: 'Gravida Corporation',
         description: 'sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet,',
         status: 'in_progress',
@@ -100,7 +88,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2019-02-16'
     }),
     new Project({
-        id: 13,
         name: 'Nec Diam Duis Institute',
         description: 'ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat',
         status: 'in_progress',
@@ -108,7 +95,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-03-26'
     }),
     new Project({
-        id: 14,
         name: 'Justo PC',
         description: 'non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu',
         status: 'draft',
@@ -116,7 +102,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2019-01-05'
     }),
     new Project({
-        id: 15,
         name: 'Felis Purus Associates',
         description: 'non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio.',
         status: 'cancelled',
@@ -124,7 +109,6 @@ export const PROJECTS: Project[] = [
         target_finish_date: '2018-03-04'
     }),
     new Project({
-        id: 16,
         name: 'Tincidunt Aliquam Limited',
         description: 'mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor vitae,',
         status: 'draft',
