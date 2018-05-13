@@ -10,7 +10,7 @@ import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { BasePage } from './BasePage';
 
-import { logger } from './logging';
+import { jsonLog } from 'koa-json-log';
 import { config } from './config';
 import { config as clientConfig } from '../client/config';
 
@@ -23,7 +23,7 @@ const staticPath = path.join(__dirname, '..', '..', 'dist', 'static');
 const app = new Koa();
 const router = new KoaRouter();
 
-app.use(logger);
+app.use(jsonLog());
 app.use(KoaMount('/static', KoaServe(staticPath)));
 app.use(KoaBody());
 

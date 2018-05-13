@@ -15,6 +15,7 @@ To install and run the project, run the following:
 git clone https://github.com/RevJS/demo_app.git revjs_demo
 cd revjs_demo
 npm i
+npm run build
 npm start
 ```
 
